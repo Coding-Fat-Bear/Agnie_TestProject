@@ -80,7 +80,7 @@ public class inquiry2 {
             if(uname.equals(dbunm) && pass.equals(dbpwd) ){
                  
                 System.out.println(emnum);
- String sql1= "select * from Field_Text where FLDID ='58'and LNGID ='"+weblng+"'";
+                String sql1= "select * from Field_Text where FLDID ='58'and LNGID ='"+weblng+"'";
                 PreparedStatement pst1 = con.prepareStatement(sql1);
                 ResultSet rs1 = pst1.executeQuery();
                 while(rs1.next()){
@@ -133,7 +133,7 @@ public class inquiry2 {
                                
                 request.setAttribute("emnum",emnum);
                 request.setAttribute("weblng",weblng);
-                RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/home.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/start.jsp");
                 rd.forward(request, response);
                 
 //        mav.addObject("log",new log());

@@ -384,7 +384,65 @@ nav li {
                 </div>
                         <button type="button" id="bpm1" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>  
                 </div>
+           <div class="tildiv">
+            <div onclick="tiledrop(this.id);" id="est" class="tile" title="<%= request.getAttribute("ESTMS") %>">
+                <div class="mstic" style="margin-left:8px">
+                    <label style="font-size:17px;color:black"><%= request.getAttribute("ESTMS") %></label>
+                    <i id="est" class="fa fa-calculator" style='font-size:93px;'></i></div>
+                      <div id="est" class="content">
+                        <ul>
+                        <li><button formaction="estcre" class="opt" ><%= request.getAttribute("EMC") %></button></li>
+			<li><button formaction="estcha" class="opt"><%= request.getAttribute("EMED") %></button></li>
+                        </ul>
+                        <ul>
+			<li><button formaction="estdis" class="opt"><%= request.getAttribute("EMDIS") %></button></li>
+                        <li><button formaction="estdel" class="opt"><%= request.getAttribute("EMDEL") %></button></li>
+                        </ul> 
+<!--                        <ul>
+                            <button type="button" id="em1" onclick="retn(this.id);" class="ret" >cre</button>
+                        </ul>-->
+                      </div>                        
+                </div>
+                        <button type="button" id="est" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
+                </div> 
                         
+             <div class="tildiv">
+            <div onclick="tiledrop(this.id);" id="prj" class="tile" title="<%= request.getAttribute("PRJMS") %>">
+                <div class="mstic" style="margin-left:8px">
+                    <label style="font-size:17px;color:black"><%= request.getAttribute("PRJMS") %></label>
+                    <i id="prj" class="fas fa-project-diagram" style='font-size:93px;'></i></div>
+                      <div id="prj" class="content">
+                        <ul>
+                        <li><button formaction="prjcre" class="opt" ><%= request.getAttribute("EMC") %></button></li>
+			<li><button formaction="prjcha" class="opt"><%= request.getAttribute("EMED") %></button></li>
+                        </ul>
+                        <ul>
+			<li><button formaction="prjdis" class="opt"><%= request.getAttribute("EMDIS") %></button></li>
+                        <li><button formaction="prjdel" class="opt"><%= request.getAttribute("EMDEL") %></button></li>
+                        </ul> 
+                      </div>                        
+                </div>
+                        <button type="button" id="prj" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
+                </div> 
+                        
+            <div class="tildiv">
+            <div onclick="tiledrop(this.id);" id="po" class="tile" title="Purchase Order">
+                <div class="mstic" style="margin-left:8px">
+                    <label style="font-size:17px;color:black">Purchase Order</label>  
+                    <i id="po" class="fas fa-shopping-cart" style='font-size:93px;'></i></div>
+                      <div id="po" class="content">
+                        <ul>
+                        <li><button formaction="pocre" class="opt">Create</button></li>
+			<li><button formaction="pocha" class="opt">Change</button></li>
+                        </ul>
+                        <ul>
+			<li><button formaction="podis" class="opt">Display</button></li>
+                        <li><button formaction="podel" class="opt">Delete</button></li>
+                        </ul> 
+                      </div>                        
+                </div>
+                        <button type="button" id="po" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
+                </div>             
         </form>                
                 
 
@@ -448,7 +506,7 @@ nav li {
                 var tblk = document.getElementById(tilid);
                if (cont[k].style.display === "block") {
                     cont[k].style.display = "none";
-                    tblk.style.backgroundColor = "white" 
+                    tblk.style.backgroundColor = "white"; 
                     mstic[k].style.display = "block";
                     ret[k].style.display = "none";
                   } else {

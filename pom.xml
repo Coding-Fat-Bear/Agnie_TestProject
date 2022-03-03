@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>mavenspring</name>
+    <name>IPEP</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -121,12 +121,12 @@
                 <artifactId>google-cloud-translate</artifactId>
                 <version>2.1.7</version>
             </dependency>
-
-
-
-        <!-- https://mvnrepository.com/artifact/com.mysql.jdbc/com.springsource.com.mysql.jdbc -->
-
-
+  <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+     <dependency>
+    <groupId>net.sf.jasperreports</groupId>
+    <artifactId>jasperreports</artifactId>
+    <version>6.18.1</version>
+    </dependency>
    
     </dependencies>
 

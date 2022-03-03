@@ -144,7 +144,27 @@ public class login2 {
                 String BPM = rs7.getString("FLDTXT");
                 request.setAttribute("BPM",BPM);
                   }  
-                
+               String sql8= "select * from Field_Text where FLDID ='107' and LNGID ='"+weblng+"'";
+                PreparedStatement pst8 = con.prepareStatement(sql8);
+                ResultSet rs8 = pst8.executeQuery();
+                  while(rs8.next()){
+                String ESTMS = rs8.getString("FLDTXT");
+                request.setAttribute("ESTMS",ESTMS);
+                  } 
+                String sql9= "select * from Field_Text where FLDID ='124' and LNGID ='"+weblng+"'";
+                PreparedStatement pst9 = con.prepareStatement(sql9);
+                ResultSet rs9 = pst9.executeQuery();
+                  while(rs9.next()){
+                String PRJMS = rs9.getString("FLDTXT");
+                request.setAttribute("PRJMS",PRJMS);
+                  }                                   
+                String sql10= "select * from Field_Text where FLDID ='106' and LNGID ='"+weblng+"'";
+                PreparedStatement pst10 = con.prepareStatement(sql10);
+                ResultSet rs10 = pst10.executeQuery();
+                  while(rs10.next()){
+                String EMDEL = rs10.getString("FLDTXT");
+                request.setAttribute("EMDEL",EMDEL);
+                  }
                                 
                 request.setAttribute("emnum",emnum);
                 request.setAttribute("weblng",weblng);
