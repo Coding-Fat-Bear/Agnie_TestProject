@@ -442,7 +442,25 @@ nav li {
                       </div>                        
                 </div>
                         <button type="button" id="po" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
-                </div>             
+                </div>   
+             <div class="tildiv">
+            <div onclick="tiledrop(this.id);" id="prr" class="tile" title="Project Revenue Report">
+                <div class="mstic" style="margin-left:8px">
+                    <label style="font-size:17px;color:black">Project Revenue</label>  
+                    <i id="prr" class="fas fa-money-bill-alt" style='font-size:93px;'></i></div> 
+                      <div id="prr" class="content">
+                        <ul>
+                        <li><button formaction="prjrevrep" class="opt">Create</button></li>
+			<li><button formaction="prjrevrep1" class="opt">Change</button></li>
+                        </ul>
+                        <ul>
+			<li><button formaction="prjrevrep2" class="opt">Display</button></li>
+                        <li><button formaction="prjrevrep3" class="opt">Delete</button></li>
+                        </ul> 
+                      </div>                        
+                </div>
+                        <button type="button" id="prr" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
+                </div>            
         </form>                
                 
 
